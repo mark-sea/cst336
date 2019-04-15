@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JS Rev</title>
+        <script>
+            
+            function doMagic(){
+                //alert("it works");
+                document.getElementById("catBox").src = "img/now_you_dont.png";
+                document.getElementById("message").innerHTML = "...now you dont.";
+                document.getElementById("message").style.color = "red";
+                
+                document.getElementById("reappearBtn").style.display = "inline";
+                document.getElementById("magicBtn").style.display ="none";
+            }
+            function getElement(id){
+                return document.getElementById();
+            }
+            
+        </script>
+        <style>
+            #reappearBtn{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="catBox" src="img/now_you_see_me.png"> <br>
+        <span id="message">now you see me.</span>
+        <br>
+        <button id="magicBtn" onclick="doMagic()"> Do Magic!</button>
+        
+        <button id="reappearBtn" onclick="reappear()">Come back!</button>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    
+    <script>
+      /* Script should always be put at the top. However if the code is long or
+      # unwieldy it should be put at the bottom. HTML is read line by line, so if
+      # long javascript is taking up the load time users will have to wait longer
+      # to see the webpage.
+      */      
+    </script>
+   </head>
+   <body>
+     <h1 id="guessHeader"> Guess a number or die, u little boingo-schoingo-fleeborber. </h1>
+
+     <p>Go on guess a number milk-drinker:</p>
+     <input type="text">
+     <button id="submitBtn"> Doink </button>
+
+     
+     
+     
+     
+     
+     
+     
+    <script> 
+      $("#guessHeader").append("!");
+      $("submitBtn").css("background-color", "purple");
+      
+      var randomNumber = Math.floor(Math.random)* 99
+      
+      $("#submitBtn").on("click", function() {
+        let guess =$("userGuess").val();
+        
+        if (guess == randomNumber) {
+          alert("U got it. Lucky guess long tittyboi")
+          $("#feedback").html("I just shat my pants bro");
+        }
+      });
+      
+      document.getElementById("guessHeader").style.color = "orange" 
+      document.getElementById("guessHeader").addEventListener("click", function(){alert("DARD")});
+    </script>
+   </body>
+</html>
